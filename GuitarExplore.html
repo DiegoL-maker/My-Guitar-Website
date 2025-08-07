@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guitar Explore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="Favicon.png">
+    <style>
+      .guitar-anatomy-container {
+        max-width: 1600px;
+        margin: 40px auto 0 auto;
+        position: relative;
+        text-align: center;
+      }
+      .guitar-image-anatomy {
+        width: 100%;
+        max-width: 1600px;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+      .hotspot {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
+        background: transparent;
+        transition: background 0.2s;
+      }
+      .hotspot:hover {
+        background: transparent;
+      }
+      .popup {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.85s cubic-bezier(0.4,0,0.2,1), visibility 0s linear 0.85s;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -110px; /* moved up by 40px from original -70px */
+        transform: translateX(-50%);
+        background: #fff;
+        color: #222;
+        border: 2px solid #4e95ff;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-size: 11px;
+        box-shadow: 0 2px 12px #4e95ff33;
+        z-index: 2000; /* ensure popup is above all other elements */
+        min-width: 320px;
+        max-width: 340px;
+        width: 330px;
+        pointer-events: none;
+        white-space: normal;
+      }
+      .popup-header {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+      }
+      .popup img {
+        display: block;
+        width: 220px;
+        height: auto;
+        margin: 0 auto 12px auto;
+        float: none;
+        border-radius: 8px;
+      }
+      .hotspot:hover .popup,
+      .hotspot:focus .popup {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.85s cubic-bezier(0.4,0,0.2,1), visibility 0s linear 0s;
+      }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="FlyingV.html">Flying V</a></li>
+            <li><a href="Explorer.html">Explorer</a></li>
+            <li><a href="LesPaul.html">Les Paul</a></li>
+            <li><a href="Comparison.html">Comparison</a></li>
+            <li><a href="Activities.html">Activities</a></li>
+        </ul>
+    </nav>
+</div>
+<h1 style="text-align:center;">Guitar Explore</h1>
+<div class="guitar-anatomy-container">
+  <img src="BigGuitar.png" alt="Guitar Anatomy" class="guitar-image-anatomy">
+  <!-- Hotspots: adjusted for 1600px wide, body left, headstock right -->
+  <div class="hotspot" style="left: 86.2%; top: 41.2%; width: 70px; height: 70px;"
+       tabindex="0">
+    <div class="popup"><div class="popup-header">Headstock</div><img src="Headstock.png" alt="Headstock">Headstock: The headstock is at the very top of the guitar. It holds the tuning pegs, which you turn to tighten or loosen the strings and keep the guitar in tune. A well-made headstock helps your guitar stay in tune longer and makes tuning easier.</div>
+  </div>
+  <div class="hotspot" style="left: 79.5%; top: 43.7%; width: 38px; height: 38px;"
+       tabindex="0">
+    <div class="popup"><div class="popup-header">Nut</div><img src="Nut.png" alt="Nut">Nut: The nut is a small strip located between the headstock and the fretboard. It has small slots that hold each string in place and guide them toward the tuners. The nut helps with string spacing, tuning stability, and how high the strings sit over the first fret. A good nut makes the guitar feel smoother to play and helps prevent buzzing or tuning problems.</div>
+  </div>
+  <div class="hotspot" style="left: 46.4%; top: 39.1%; width: 220px; height: 60px;"
+       tabindex="0">
+    <div class="popup"><div class="popup-header">Neck & Fretboard</div><img src="Neck.png" alt="Neck & Fretboard">Neck & Fretboard: The neck and fretboard are the long part of the guitar that sticks out from the body. The fretboard is the front side where the metal frets are, and that’s where you press the strings to play notes and chords. The shape and feel of the neck affect how easy the guitar is to play, and the fretboard also influences the tone.</div>
+  </div>
+  <div class="hotspot" style="left: 4.5%; top: 2.7%; width: 130px; height: 110px;"
+       tabindex="0">
+    <div class="popup"><div class="popup-header">Body</div><img src="Body.png" alt="Body">Body: The body is the big part of the guitar that rests against your body. On electric guitars, it holds the pickups and electronics. The size, shape, and type of wood all affect how the guitar sounds and feels. Some bodies are solid, while others are hollow or partly hollow, which changes the tone.</div>
+  </div>
+  <div class="hotspot" style="left: 11.5%; top: 40.5%; width: 60px; height: 60px;"
+       tabindex="0">
+    <div class="popup"><div class="popup-header">Bridge</div><img src="Bridge.png" alt="Bridge">Bridge: The bridge is the part on the body where the strings are attached at the bottom. It helps control the string’s height and keeps them in tune. Some bridges stay still, while others let you use a whammy bar to bend notes. A good bridge helps your guitar sound clean and stay in tune.</div>
+  </div>
+  <div class="hotspot" style="left: 19%; top: 29.3%; width: 120px; height: 120px;"
+       tabindex="0">
+    <div class="popup" style="min-width:360px;max-width:520px;"><div class="popup-header">Pickups</div><img src="Pickups.png" alt="Pickups">Pickups: Are small magnetic parts under the strings that "pick up" the sound of the strings when you play. They turn the string’s vibration into an electric signal that goes to the amp, which is how a guitar gets its sound. Different pickups create different tones, some sound sharp and clear, while others sound heavier or smoother.
+</div>
+  </div>
+</div>
+<p style="text-align:center;max-width:600px;margin:30px auto 0 auto;">Hover over different parts of the guitar to learn more about its anatomy!</p>
+</body>
+</html>
