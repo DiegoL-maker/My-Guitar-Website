@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuitarExplore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="Favicon.png">
+    <style>
+      .guitar-anatomy-container {
+        max-width: 600px;
+        margin: 60px auto 0 auto;
+        position: relative;
+        text-align: center;
+      }
+      .guitar-image-anatomy {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .hotspot {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
+        background: rgba(78,149,255,0.15);
+        transition: background 0.2s;
+      }
+      .hotspot:hover {
+        background: rgba(78,149,255,0.35);
+      }
+      .popup {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: -60px;
+        transform: translateX(-50%);
+        background: #fff;
+        color: #222;
+        border: 2px solid #4e95ff;
+        border-radius: 10px;
+        padding: 12px 18px;
+        font-size: 16px;
+        box-shadow: 0 2px 12px #4e95ff33;
+        z-index: 20;
+        min-width: 180px;
+        max-width: 260px;
+        pointer-events: none;
+        white-space: normal;
+      }
+      .hotspot:hover .popup {
+        display: block;
+      }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="FlyingV.html">Flying V</a></li>
+            <li><a href="Explorer.html">Explorer</a></li>
+            <li><a href="LesPaul.html">Les Paul</a></li>
+            <li><a href="Comparison.html">Comparison</a></li>
+            <li><a href="Activities.html">Activities</a></li>
+        </ul>
+    </nav>
+</div>
+<h1 style="text-align:center;">GuitarExplore</h1>
+<div class="guitar-anatomy-container">
+  <img src="Gibsons.png" alt="Guitar Anatomy" class="guitar-image-anatomy">
+  <!-- Hotspots: adjust left/top/width/height for your image -->
+  <div class="hotspot" style="left: 48%; top: 10%; width: 60px; height: 60px;"
+       tabindex="0">
+    <div class="popup">Headstock: Holds the tuning pegs and keeps the strings in place.</div>
+  </div>
+  <div class="hotspot" style="left: 48%; top: 32%; width: 38px; height: 38px;"
+       tabindex="0">
+    <div class="popup">Nut: Guides the strings from the headstock to the fretboard.</div>
+  </div>
+  <div class="hotspot" style="left: 48%; top: 45%; width: 60px; height: 120px;"
+       tabindex="0">
+    <div class="popup">Neck & Fretboard: Where you press the strings to play notes and chords.</div>
+  </div>
+  <div class="hotspot" style="left: 48%; top: 75%; width: 120px; height: 80px;"
+       tabindex="0">
+    <div class="popup">Body: The main part of the guitar, which amplifies the sound.</div>
+  </div>
+  <div class="hotspot" style="left: 60%; top: 80%; width: 40px; height: 40px;"
+       tabindex="0">
+    <div class="popup">Bridge: Anchors the strings to the body and transfers vibration.</div>
+  </div>
+  <div class="hotspot" style="left: 38%; top: 80%; width: 40px; height: 40px;"
+       tabindex="0">
+    <div class="popup">Pickups: Convert string vibrations into electrical signals (for electric guitars).</div>
+  </div>
+</div>
+<p style="text-align:center;max-width:600px;margin:30px auto 0 auto;">Hover over different parts of the guitar to learn more about its anatomy!</p>
+</body>
+</html>
